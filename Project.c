@@ -1,26 +1,3 @@
-/*****************************************************
-This program was produced by the
-CodeWizardAVR V2.05.3 Standard
-Automatic Program Generator
-© Copyright 1998-2011 Pavel Haiduc, HP InfoTech s.r.l.
-http://www.hpinfotech.com
-
-Project : 
-Version : 
-Date    : 22.09.2021
-Author  : User
-Company : jkjkj
-Comments: 
-
-
-Chip type               : ATmega328P
-Program type            : Application
-AVR Core Clock frequency: 8,000000 MHz
-Memory model            : Small
-External RAM size       : 0
-Data Stack size         : 512
-*****************************************************/
-
 #include <mega328p.h>
 #include <delay.h>
 
@@ -66,13 +43,13 @@ OCR1BL=0;
 delay_ms(500);
 }
 
-void back()
+void back(int time)
 {
 OCR0A=100;
 OCR0B=0;
 OCR1AL=0;
 OCR1BL=100;
-delay_ms(1000);
+delay_ms(time);
 OCR0A=0;
 OCR0B=0;
 OCR1AL=0;
@@ -80,6 +57,33 @@ OCR1BL=0;
 delay_ms(500);
 }
 
+void way1(){
+//start
+forward(1500);
+turn_right();
+forward(1000);
+turn_left();
+//first
+forward(1500);
+turn_left();
+forward(1000);
+back(1000);
+turn_right();
+//second
+forward(1500);
+turn_left();
+forward(750);
+back(750);
+turn_right();
+//third
+forward(1500);
+turn_left();
+forward(1000);
+back(1000);
+turn_right();
+//finish
+forward(2000);
+}
 void main(void)
 {
 DDRB=0x0E;
@@ -95,9 +99,10 @@ TCCR1B=0x0D;
 TCCR2A=0xA3;
 TCCR2B=0x00;
 
+
+
 while (1)
       {
-        forward(3000);
-        turn_right();
+        way1();        
       }
 }
