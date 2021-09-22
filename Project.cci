@@ -1,0 +1,9 @@
+VERSION:3 SOURCE_TIMESTAMP:53366316
+NODE:I LEVEL:0 LINE:24 "C:\cvavr2\inc\mega328p.h"
+NODE:I LEVEL:0 LINE:25 "C:\cvavr2\inc\delay.h"
+NODE:F LEVEL:0 LINE:27 "pryamo_3s(void)"
+NODE:F LEVEL:0 LINE:40 "pryamo_1s(void)"
+NODE:F LEVEL:0 LINE:53 "povorot_p(void)"
+NODE:F LEVEL:0 LINE:66 "povorot_l(void)"
+NODE:F LEVEL:0 LINE:79 "nazad(void)"
+NODE:F LEVEL:0 LINE:95 "main(void)"
